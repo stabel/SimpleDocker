@@ -13,7 +13,7 @@ if (filter_var($from, FILTER_VALIDATE_EMAIL)) {
 	$headers = 'From: webmaster@example.com'       . "\r\n" .
                  'Reply-To: webmaster@example.com' . "\r\n" .
                  'X-Mailer: PHP/' . phpversion();
-
+    echo($to);
     mail($to, $subject, $message."\r\n\r\nfrom: ".$_SERVER['REMOTE_ADDR'], $headers);
     die('OK');
     
